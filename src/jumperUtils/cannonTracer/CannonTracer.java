@@ -13,7 +13,7 @@ public class CannonTracer {
 	public final PlayerLeaveListener playerLeaveListener;
 	public final ServerChatListener serverChatListener;
 	public final TickManager tickEvent;
-	public TracerCMD tracerCMD;
+	public final TracerCMD tracerCMD;
 	
 	public CannonTracer(JumperUtils main){
 		this.main = main;
@@ -21,10 +21,6 @@ public class CannonTracer {
 		playerLeaveListener = new PlayerLeaveListener(this);
 		serverChatListener = new ServerChatListener(this);
 		tickEvent = new TickManager(this);
-		registerCommands();
-	}
-	
-	public void registerCommands() {
 		tracerCMD = new TracerCMD(this);
 	}
 }

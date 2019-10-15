@@ -13,7 +13,7 @@ import jumperutils.cannontracer.utils.EntityDataChainLink;
 import jumperutils.cannontracer.utils.SimpleLocation;
 
 public class TickManager implements Runnable{
-	public CannonTracer cannonTracer;
+	public final CannonTracer cannonTracer;
 	private HashMap<String, Float> memoryTime;
 	
 	public TickManager(CannonTracer cannonTracer) {
