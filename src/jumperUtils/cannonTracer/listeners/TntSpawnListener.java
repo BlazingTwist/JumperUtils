@@ -1,4 +1,4 @@
-package jumperUtils.cannonTracer.listeners;
+package jumperutils.cannontracer.listeners;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -13,10 +13,10 @@ import org.bukkit.event.entity.EntitySpawnEvent;
 
 import com.google.common.collect.Sets;
 
-import jumperUtils.cannonTracer.CannonTracer;
-import jumperUtils.cannonTracer.utils.EntityDataChain;
-import jumperUtils.cannonTracer.utils.EntityDataChainLink;
-import jumperUtils.cannonTracer.utils.UserSettings;
+import jumperutils.cannontracer.CannonTracer;
+import jumperutils.cannontracer.utils.EntityDataChain;
+import jumperutils.cannontracer.utils.EntityDataChainLink;
+import jumperutils.cannontracer.utils.UserSettings;
 
 public class TntSpawnListener implements Listener{
 	public final CannonTracer cannonTracer;

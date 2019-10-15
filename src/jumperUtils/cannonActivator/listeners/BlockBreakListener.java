@@ -1,4 +1,4 @@
-package jumperUtils.cannonActivator.listeners;
+package jumperutils.cannonactivator.listeners;
 
 import java.util.HashMap;
 
@@ -9,8 +9,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 
-import jumperUtils.cannonActivator.CannonActivator;
-import jumperUtils.cannonActivator.utils.ButtonData;
+import jumperutils.cannonactivator.CannonActivator;
+import jumperutils.cannonactivator.utils.ButtonData;
 
 public class BlockBreakListener implements Listener{
 	public HashMap<Player, ButtonData> blockdata = new HashMap<>();

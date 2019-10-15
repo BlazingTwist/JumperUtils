@@ -1,4 +1,4 @@
-package jumperUtils.cannonTracer.events;
+package jumperutils.cannontracer.events;
 
 import java.util.ConcurrentModificationException;
 import java.util.HashMap;
@@ -7,10 +7,10 @@ import java.util.Set;
 
 import org.bukkit.entity.Entity;
 
-import jumperUtils.cannonTracer.CannonTracer;
-import jumperUtils.cannonTracer.utils.EntityDataChain;
-import jumperUtils.cannonTracer.utils.EntityDataChainLink;
-import jumperUtils.cannonTracer.utils.SimpleLocation;
+import jumperutils.cannontracer.CannonTracer;
+import jumperutils.cannontracer.utils.EntityDataChain;
+import jumperutils.cannontracer.utils.EntityDataChainLink;
+import jumperutils.cannontracer.utils.SimpleLocation;
 
 public class TickManager implements Runnable{
 	public CannonTracer cannonTracer;

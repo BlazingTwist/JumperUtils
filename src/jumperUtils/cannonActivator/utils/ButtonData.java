@@ -1,4 +1,4 @@
-package jumperUtils.cannonActivator.utils;
+package jumperutils.cannonactivator.utils;
 
 import org.bukkit.World;
 

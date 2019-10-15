@@ -1,11 +1,11 @@
-package jumperUtils;
+package jumperutils;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-import jumperUtils.cannonActivator.CannonActivator;
-import jumperUtils.cannonTracer.CannonTracer;
+import jumperutils.cannonactivator.CannonActivator;
+import jumperutils.cannontracer.CannonTracer;
 
-public class Main extends JavaPlugin{
+public class JumperUtils extends JavaPlugin{
 	private CannonActivator cannonActivator;
 	private CannonTracer cannonTracer;
 	
@@ -18,7 +18,6 @@ public class Main extends JavaPlugin{
 	}
 	
 	public void onEnable() {
-		System.out.println("JumperUtils just started running");
 		cannonActivator = new CannonActivator(this);
 		cannonTracer = new CannonTracer(this);
 		

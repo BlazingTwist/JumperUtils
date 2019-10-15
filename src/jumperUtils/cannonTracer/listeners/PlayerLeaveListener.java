@@ -1,11 +1,11 @@
-package jumperUtils.cannonTracer.listeners;
+package jumperutils.cannontracer.listeners;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
 
-import jumperUtils.cannonTracer.CannonTracer;
+import jumperutils.cannontracer.CannonTracer;
 
 public class PlayerLeaveListener implements Listener {
 	public final CannonTracer cannonTracer;

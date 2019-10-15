@@ -1,4 +1,4 @@
-package jumperUtils.cannonTracer.utils;
+package jumperutils.cannontracer.utils;
 
 public class EntityDataChainLink {
 	public SimpleLocation location;

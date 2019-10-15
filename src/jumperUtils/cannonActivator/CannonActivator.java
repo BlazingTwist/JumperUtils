@@ -1,15 +1,15 @@
-package jumperUtils.cannonActivator;
+package jumperutils.cannonactivator;
 
-import jumperUtils.Main;
-import jumperUtils.cannonActivator.listeners.BlockBreakListener;
-import jumperUtils.cannonActivator.listeners.PlayerInteractListener;
+import jumperutils.JumperUtils;
+import jumperutils.cannonactivator.listeners.BlockBreakListener;
+import jumperutils.cannonactivator.listeners.PlayerInteractListener;
 
 public class CannonActivator {
-	public final Main main;
+	public final JumperUtils main;
 	public final BlockBreakListener blockBreakListener;
 	public final PlayerInteractListener playerInteractListener;
 	
-	public CannonActivator(Main main) {
+	public CannonActivator(JumperUtils main) {
 		this.main = main;
 		blockBreakListener = new BlockBreakListener(this);
 		playerInteractListener = new PlayerInteractListener(this);

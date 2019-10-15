@@ -1,4 +1,4 @@
-package jumperUtils.cannonTracer.utils;
+package jumperutils.cannontracer.utils;
 
 import org.bukkit.Location;
 

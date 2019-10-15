@@ -1,4 +1,4 @@
-package jumperUtils.cannonActivator.listeners;
+package jumperutils.cannonactivator.listeners;
 
 import java.util.HashMap;
 
@@ -15,10 +15,10 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.EquipmentSlot;
 
-import jumperUtils.cannonActivator.CannonActivator;
-import jumperUtils.cannonActivator.utils.ButtonData;
-import jumperUtils.cannonActivator.utils.ButtonTypes;
-import jumperUtils.cannonActivator.utils.ButtonTypes.ButtonType;
+import jumperutils.cannonactivator.CannonActivator;
+import jumperutils.cannonactivator.utils.ButtonData;
+import jumperutils.cannonactivator.utils.ButtonTypes;
+import jumperutils.cannonactivator.utils.ButtonTypes.ButtonType;
 
 public class PlayerInteractListener implements Listener{
 	public static final HashMap<Material, ButtonType> typeData = ButtonTypes.getTypeData();

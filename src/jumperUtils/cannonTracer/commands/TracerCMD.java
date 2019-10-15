@@ -1,15 +1,15 @@
-package jumperUtils.cannonTracer.commands;
+package jumperutils.cannontracer.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import jumperUtils.cannonTracer.CannonTracer;
-import jumperUtils.cannonTracer.utils.UserSettings;
+import jumperutils.cannontracer.CannonTracer;
+import jumperutils.cannontracer.utils.UserSettings;
 
 public class TracerCMD implements CommandExecutor{
-	public CannonTracer cannonTracer;
+	public final CannonTracer cannonTracer;
 	
 	public TracerCMD(CannonTracer cannonTracer) {
 		this.cannonTracer = cannonTracer;
