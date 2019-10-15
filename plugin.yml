@@ -1,0 +1,12 @@
+name: JumperUtils
+main: jumperUtils.Main
+version: 0.0.3
+author: definitely not Jumper
+description: general ingame utilities I consider useful
+api-version: 1.13
+
+commands:
+  tracer:
+    description: Commands to interact with the CannonTracer.
+    usage: |
+      /tracer [un]register - (un)registers yourself
