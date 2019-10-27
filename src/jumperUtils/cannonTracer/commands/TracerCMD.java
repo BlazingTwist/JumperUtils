@@ -45,7 +45,11 @@ public class TracerCMD implements CommandExecutor{
 				}
 				return true;
 			}else if(args[0].equalsIgnoreCase("list")) {
-				p.sendMessage(cannonTracer.tntSpawnListener.getPlayerSettings().keySet().toString());
+				if(cannonTracer.tntSpawnListener.getPlayerSettings().keySet().isEmpty()) {
+					p.sendMessage("§cNo Players are registered yet.");
+				}else {
+					p.sendMessage(cannonTracer.tntSpawnListener.getPlayerSettings().keySet().toString());
+				}
 				return true;
 			}
 		}
