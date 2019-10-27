@@ -25,7 +25,7 @@ public class Update {
 	public static final String RELOAD_MSG = "is reloading.";
 	private static String pluginName;
 	
-	{
+	static {
 		pluginName = JumperUtils.class.getSimpleName();
 	}
 	

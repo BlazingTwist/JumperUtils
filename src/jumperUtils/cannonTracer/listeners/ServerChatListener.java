@@ -4,6 +4,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
+import org.bukkit.scheduler.BukkitRunnable;
 
 import jumperutils.cannontracer.CannonTracer;
 
@@ -36,7 +37,12 @@ public class ServerChatListener implements Listener{
 				return;
 			}
 			if(message.equals("[PullDataRequest]")) {
-				cannonTracer.tntSpawnListener.handlePullRequest(p);
+				new BukkitRunnable() {
+					@Override
+					public void run() {
+						cannonTracer.tntSpawnListener.handlePullRequest(p);
+					}
+				}.runTaskAsynchronously(cannonTracer.main);
 				e.setCancelled(true);
 				return;
 			}

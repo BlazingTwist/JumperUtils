@@ -44,6 +44,9 @@ public class TracerCMD implements CommandExecutor{
 					p.sendMessage("§cYou are not registered");
 				}
 				return true;
+			}else if(args[0].equalsIgnoreCase("list")) {
+				p.sendMessage(cannonTracer.tntSpawnListener.getPlayerSettings().keySet().toString());
+				return true;
 			}
 		}
 		return false;
