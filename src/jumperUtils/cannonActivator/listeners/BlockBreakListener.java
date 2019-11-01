@@ -37,7 +37,14 @@ public class BlockBreakListener implements Listener{
 			return;
 		}
 		e.setCancelled(true);
-		Block block = e.getBlock();
+		playerSelectsBlock(p, e.getBlock());
+	}
+	
+	public void playerSelectsBlock(Player p, Block block) {
+		if(block == null || block.getType() == Material.AIR) {
+			p.sendMessage("§cCouldn't select Block, might be too far away.");
+			return;
+		}
 		if(blockdata.containsKey(p)) {
 			blockdata.get(p).setLocation(block.getWorld(), block.getX(), block.getY(), block.getZ());
 		}else {

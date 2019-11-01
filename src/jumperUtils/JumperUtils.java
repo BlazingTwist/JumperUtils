@@ -10,6 +10,7 @@ import jumperutils.cannontracer.CannonTracer;
 public class JumperUtils extends JavaPlugin{
 	private CannonActivator cannonActivator;
 	private CannonTracer cannonTracer;
+	private JumperUtilsCMD jumperUtilsCMD;
 	private static JumperUtils instance;
 	private static PluginManager pluginManager;
 	
@@ -26,9 +27,14 @@ public class JumperUtils extends JavaPlugin{
 		return cannonTracer;
 	}
 	
+	public JumperUtilsCMD getJumperUtilsCMD() {
+		return jumperUtilsCMD;
+	}
+	
 	public void onEnable() {
 		cannonActivator = new CannonActivator(this);
 		cannonTracer = new CannonTracer(this);
+		jumperUtilsCMD = new JumperUtilsCMD(this);
 	}
 	
 	public static PluginManager getPluginManager(){

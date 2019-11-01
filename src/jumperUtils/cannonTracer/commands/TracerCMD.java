@@ -1,33 +1,43 @@
 package jumperutils.cannontracer.commands;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 
 import jumperutils.cannontracer.CannonTracer;
 import jumperutils.cannontracer.utils.UserSettings;
-import jumperutils.global.utils.Update;
 
-public class TracerCMD implements CommandExecutor{
+public class TracerCMD implements CommandExecutor, TabCompleter{
 	public final CannonTracer cannonTracer;
 	
 	public TracerCMD(CannonTracer cannonTracer) {
 		this.cannonTracer = cannonTracer;
 		cannonTracer.main.getCommand("tracer").setExecutor(this);
-	}	
+	}
+	
+	static final List<String> subCommands = Arrays.asList("register", "unregister");
+	
+	@Override
+	public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args){
+		if(args.length <= 1) {
+			return subCommands;
+		}
+		return null;
+	}
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		if(!(sender instanceof Player)) {
-			return handleConsoleCommands(args);
+			return false;
 		}
 		Player p = (Player) sender;
 		if(args.length == 1) {
-			if(args[0].equalsIgnoreCase("update")) {
-				Update.updatePlugin(p);
-				return true;
-			}else if(args[0].equalsIgnoreCase("register")) {
+			if(args[0].equalsIgnoreCase("register")) {
 				if(cannonTracer.tntSpawnListener.getPlayerSettings().containsKey(p)) {
 					p.sendMessage("§cYou are already registered");
 				}else {
@@ -50,16 +60,6 @@ public class TracerCMD implements CommandExecutor{
 				}else {
 					p.sendMessage(cannonTracer.tntSpawnListener.getPlayerSettings().keySet().toString());
 				}
-				return true;
-			}
-		}
-		return false;
-	}
-	
-	public boolean handleConsoleCommands(String[] args) {
-		if(args.length == 1) {
-			if(args[0].equalsIgnoreCase("update")) {
-				Update.updatePlugin(null);
 				return true;
 			}
 		}

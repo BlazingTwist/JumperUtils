@@ -51,12 +51,22 @@ public class PlayerInteractListener implements Listener{
 			return;
 		}
 		e.setCancelled(true);
+		handleActivatorTrigger(p);
+	}
+	
+	public void handleActivatorTrigger(Player p) {
 		ButtonData currentBlock = cannonActivator.blockBreakListener.blockdata.get(p);
 		if(currentBlock == null) {
-			p.sendMessage("§cNo Block selected!");
+			p.sendMessage("§cNo Block Selected!");
 			return;
 		}
+		
 		World currentWorld = currentBlock.world;
+		if(currentWorld != p.getWorld()) {
+			p.sendMessage("§cCan't (or rather: won't) activate a block in a different world!");
+			return;
+		}
+		
 		Block block = currentWorld.getBlockAt(currentBlock.x, currentBlock.y, currentBlock.z);
 		Material blockmaterial = block.getType();
 		if(!typeData.containsKey(blockmaterial)) {
@@ -64,6 +74,7 @@ public class PlayerInteractListener implements Listener{
 			forceBlockUpdate(block);
 			return;
 		}
+		
 		ButtonType selectedType = typeData.get(blockmaterial);
 		switch(selectedType) {
 		case LEVER:
