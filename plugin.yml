@@ -1,0 +1,25 @@
+name: JumperUtils
+main: jumperutils.JumperUtils
+version: 1.1.0
+author: The_Dark_Jumper
+description: general ingame utilities I consider useful
+api-version: 1.13
+
+commands:
+  jumperutils:
+    description: Commands regarding the general Plugin.
+    usage: |
+      /jumperutils update - updates the Plugin
+  cannonactivator:
+    description: Commands to interact with the CannonActivator.
+    usage: |
+      /cannonactivator select - selects whichever Block you're looking at as a button
+      /cannonactivator trigger - triggers (activates or toggles) the selected button
+  tracer:
+    description: Commands to interact with the CannonTracer.
+    usage: |
+      /tracer [un]register - (un)registers yourself
+  cannontester:
+    description: Commands to interact with the CannonTester.
+    usage: |
+      /cannontester edit - open the cannonTester gui
