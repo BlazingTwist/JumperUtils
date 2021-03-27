@@ -23,7 +23,7 @@ public class Update {
 	public static final String SUCCESS_MSG = "was updated successfully.";
 	public static final String RELOAD_MSG = "is reloading.";
 	public static final String RELOAD_COMPLETE_MSG = "has finished reloading.";
-	public static final String version = "1.1.0-a";
+	public static final String version = "1.1.1-a";
 	private static final String pluginName;
 
 	static {

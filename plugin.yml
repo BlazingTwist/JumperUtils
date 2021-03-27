@@ -1,6 +1,6 @@
 name: JumperUtils
 main: jumperutils.JumperUtils
-version: 1.1.0
+version: 1.1.1
 author: The_Dark_Jumper
 description: general ingame utilities I consider useful
 api-version: 1.13
