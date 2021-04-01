@@ -51,7 +51,7 @@ public class CannonTesterCMD implements CommandExecutor, TabExecutor {
 		Player p = (Player) sender;
 		if (args.length == 1) {
 			if (args[0].equalsIgnoreCase("edit")) {
-				Block targetBlock = p.getTargetBlock(10);
+				Block targetBlock = p.getTargetBlockExact(10);
 				if (targetBlock == null || targetBlock.getType() != Material.COMMAND_BLOCK) {
 					p.sendMessage("You have to look at a command-block to edit a testCannon.");
 					return true;

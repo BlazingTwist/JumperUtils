@@ -6,16 +6,19 @@
 
     <properties>
         <plugman-path>D:/Minecraft_Modding/testserver-1.15.2/plugins/PlugMan.jar</plugman-path>
+        <spigot-path>D:/Minecraft_Modding/spigot-1.15.2.jar</spigot-path>
+        <project.build.sourceEncoding>windows-1252</project.build.sourceEncoding>
     </properties>
 
     <groupId>org.example</groupId>
     <artifactId>JumperUtils-1.15.2</artifactId>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
                 <configuration>
                     <source>8</source>
                     <target>8</target>
@@ -63,18 +66,18 @@
             <scope>system</scope>
             <systemPath>${plugman-path}</systemPath>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>com.destroystokyo.paper</groupId>
             <artifactId>paper-api</artifactId>
             <version>1.15.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot</artifactId>
             <version>1.15.2</version>
             <scope>system</scope>
-            <systemPath>D:/Minecraft_Modding/spigot-1.15.2.jar</systemPath>
+            <systemPath>${spigot-path}</systemPath>
         </dependency>
         <dependency>
             <groupId>jumper</groupId>
@@ -82,12 +85,6 @@
             <version>1.1.0</version>
             <classifier>jar-with-dependencies</classifier>
         </dependency>
-        <!--<dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>1.15.2-R0.1-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>-->
     </dependencies>
 
 </project>
