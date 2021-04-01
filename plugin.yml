@@ -4,6 +4,7 @@ version: 1.1.2
 author: The_Dark_Jumper
 description: general ingame utilities I consider useful
 api-version: 1.13
+softdepend: [PlugMan]
 
 commands:
   jumperutils:
